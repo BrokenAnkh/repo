@@ -1,0 +1,18 @@
+server:
+  port: 9070
+
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git: https://github.com/Posuoe/repo.git
+        search-paths: config
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:9080/eureka
